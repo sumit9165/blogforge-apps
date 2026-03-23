@@ -1,0 +1,169 @@
+.rich-editor {
+  border: 1.5px solid var(--paper-edge);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: white;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.rich-editor:focus-within {
+  border-color: var(--gold);
+  box-shadow: var(--shadow-gold);
+}
+
+/* Toolbar */
+.rich-editor__toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--paper-edge);
+  background: var(--paper-warm);
+}
+
+.rich-editor__group {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.rich-editor__divider {
+  width: 1px;
+  height: 20px;
+  background: var(--paper-edge);
+  margin: 0 6px;
+}
+
+.rich-editor__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 30px;
+  padding: 0 6px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: transparent;
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+  line-height: 1;
+}
+
+.rich-editor__btn:hover {
+  background: var(--paper-edge);
+  color: var(--ink);
+}
+
+.rich-editor__btn--active {
+  background: var(--ink);
+  color: var(--gold);
+}
+
+.rich-editor__btn--active:hover {
+  background: var(--ink-soft);
+  color: var(--gold-light);
+}
+
+/* Editor Area */
+.rich-editor__content {
+  min-height: 420px;
+  cursor: text;
+}
+
+.rich-editor__area {
+  min-height: 420px;
+  padding: 1.5rem;
+  outline: none;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--ink-soft);
+}
+
+/* Placeholder */
+.rich-editor__area p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  color: var(--slate-light);
+  pointer-events: none;
+  float: left;
+  height: 0;
+  font-style: italic;
+}
+
+/* Content styles within editor */
+.rich-editor__area h1 { font-size: 2rem; font-weight: 800; margin: 1.5em 0 0.5em; letter-spacing: -0.02em; }
+.rich-editor__area h2 { font-size: 1.5rem; font-weight: 700; margin: 1.5em 0 0.5em; }
+.rich-editor__area h3 { font-size: 1.2rem; font-weight: 700; margin: 1.25em 0 0.4em; }
+.rich-editor__area p  { margin-bottom: 1em; }
+.rich-editor__area strong { font-weight: 700; color: var(--ink); }
+.rich-editor__area em  { font-style: italic; }
+.rich-editor__area s   { text-decoration: line-through; opacity: 0.6; }
+
+.rich-editor__area blockquote {
+  border-left: 3px solid var(--gold);
+  padding: 0.5rem 0 0.5rem 1.25rem;
+  margin: 1.5em 0;
+  font-style: italic;
+  color: var(--slate);
+}
+
+.rich-editor__area pre {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  overflow-x: auto;
+  margin: 1.25em 0;
+}
+
+.rich-editor__area code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: var(--paper-warm);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  color: var(--rust);
+}
+
+.rich-editor__area pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+.rich-editor__area ul, .rich-editor__area ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1em;
+}
+.rich-editor__area li { margin-bottom: 0.3em; }
+
+.rich-editor__area hr {
+  border: none;
+  border-top: 1px solid var(--paper-edge);
+  margin: 2em 0;
+}
+
+.rich-editor__area a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-decoration-color: rgba(201,151,58,0.4);
+}
+
+.rich-editor__area img {
+  max-width: 100%;
+  border-radius: var(--radius-md);
+  margin: 1em 0;
+}
+
+/* Selection highlight in editor */
+.rich-editor__area .ProseMirror-selectednode {
+  outline: 2px solid var(--gold);
+  border-radius: var(--radius-sm);
+}

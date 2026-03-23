@@ -1,0 +1,103 @@
+.blog-list-page {}
+
+.blog-list-page__header {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 3rem 0 2.5rem;
+  margin-bottom: var(--space-xl);
+}
+
+.blog-list-page__label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.blog-list-page__title {
+  font-family: var(--font-display);
+  font-size: 2.75rem;
+  font-weight: 900;
+  color: var(--paper);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.blog-list-page__sub {
+  color: rgba(250,248,245,0.5);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.blog-list-page__search {
+  display: flex;
+  gap: var(--space-sm);
+  max-width: 560px;
+}
+
+.blog-list-page__search-wrap {
+  position: relative;
+  flex: 1;
+}
+
+.blog-list-page__search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
+.blog-list-page__search-input {
+  padding-left: 2.5rem !important;
+  background: rgba(255,255,255,0.1) !important;
+  border-color: rgba(255,255,255,0.15) !important;
+  color: var(--paper) !important;
+}
+
+.blog-list-page__search-input::placeholder { color: rgba(250,248,245,0.4) !important; }
+.blog-list-page__search-input:focus { background: rgba(255,255,255,0.15) !important; }
+
+.blog-list-page__search-clear {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: rgba(250,248,245,0.5);
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 4px;
+}
+
+.blog-list-page__search-info {
+  font-size: 0.9rem;
+  color: var(--slate);
+  margin-bottom: var(--space-lg);
+  font-style: italic;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-2xl);
+  flex-wrap: wrap;
+}
+
+.pagination__pages {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pagination__ellipsis {
+  padding: 0 4px;
+  color: var(--slate-light);
+}
