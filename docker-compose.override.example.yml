@@ -1,0 +1,20 @@
+# ============================================================
+# docker-compose.override.yml — LOCAL OVERRIDES
+# Copy to docker-compose.override.yml to use
+# This file is gitignored — safe for local secrets
+# ============================================================
+
+version: "3.9"
+
+services:
+  db:
+    # Expose DB to host so you can connect with MySQL Workbench / TablePlus
+    ports:
+      - "3306:3306"
+
+  backend:
+    # Mount source for hot-reload in development
+    volumes:
+      - ./backend/src:/app/src
+    environment:
+      LOG_LEVEL: debug

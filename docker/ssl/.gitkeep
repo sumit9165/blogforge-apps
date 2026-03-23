@@ -1,0 +1,10 @@
+# Place your SSL certificate files here:
+#   fullchain.pem   — your certificate + chain
+#   privkey.pem     — your private key
+#
+# Using Let's Encrypt (certbot)?
+# Run: certbot certonly --standalone -d yourdomain.com
+# Then copy from /etc/letsencrypt/live/yourdomain.com/
+#
+# WARNING: Never commit actual .pem files to git!
+# .pem files are excluded in .gitignore automatically.
