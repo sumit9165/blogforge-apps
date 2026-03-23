@@ -1,0 +1,61 @@
+# ============================================================
+# BlogForge — .dockerignore
+# ============================================================
+
+# ── Node modules (installed fresh inside container) ─────────
+node_modules
+*/node_modules
+**/node_modules
+
+# ── Git ──────────────────────────────────────────────────────
+.git
+.gitignore
+.gitattributes
+
+# ── Environment files ────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*/.env
+*/.env.*
+!*/.env.example
+
+# ── Frontend build artifacts (built inside container) ────────
+frontend/dist
+frontend/dist-ssr
+frontend/.vite
+
+# ── Logs ─────────────────────────────────────────────────────
+logs
+*.log
+backend/logs
+
+# ── Dev / Editor files ───────────────────────────────────────
+.vscode
+.idea
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Docker files (no need to copy these into image) ──────────
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+docker-volumes/
+mysql-data/
+
+# ── README / Docs ────────────────────────────────────────────
+README.md
+*.md
+nginx.conf.example
+
+# ── Test / Coverage ──────────────────────────────────────────
+coverage
+.nyc_output
+
+# ── Misc ─────────────────────────────────────────────────────
+*.tgz
+*.tar.gz
+.cache
+.turbo
